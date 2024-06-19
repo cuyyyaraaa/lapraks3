@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">Survey Mood Student College Information Systems</h1>
+        <form id="survey-form" action="data.php" method="post">
+            <p id="description">Survey for Student 2022 a.k.a 4TH Semester</p>
+            <div class="row">
+                <div class="Left">
+                    <label id="name-label" for="name">Name:</label>
+                </div>
+                <div class="Right">
+                    <input autofocus type="text" id="name" name="name" placeholder="What's Your Name?" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label id="email-label" for="email">Email:</label>
+                </div>
+                <div class="Right">
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label id="number-label">Age:</label>
+                </div>
+                <div class="Right">
+                    <input type="number" id="number" name="number" min="16" max="30" placeholder="Old People?">
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label for="date">Today is?</label>
+                </div>
+                <div class="Right">
+                    <select id="date" name="date" placeholder="Select an option">
+                        <option disabled selected value>today??</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label>How Are You Mood Today?</label>
+                </div>
+                <div class="Right">
+                    <input type="radio" name="radio" value="I'm Great">I'm Great <br>
+                    <input type="radio" name="radio" value="I'm Good">I'm Good<br>
+                    <input type="radio" name="radio" value="I'm Okay">I'm Okay<br>
+                    <input type="radio" name="radio" value="I'm Struggling">I'm Struggling<br>
+                    <input type="radio" name="radio" value="I'm upset">I'm upset<br>
+                    <img src="mood.png" alt="moodtracker" width="200" height="75">
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label>What is your course?</label>
+                </div>
+                <div class="Right">
+                    <select name="course" placeholder="course?">
+                        <option disabled selected value>course?</option>
+                        <option value="Web Programming">Web Programming</option>
+                        <option value="Big Data">Big Data</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="IoT">IoT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label for="future">Things that should be improved in the future (Check for future dua):</label>
+                </div>
+                <div class="Right">
+                    <input type="checkbox" name="future[]" value="Frontend">Front-End Programming<br>
+                    <input type="checkbox" name="future[]" value="Backend">Back-End Programming<br>
+                    <input type="checkbox" name="future[]" value="Datavis">Data Visualization<br>
+                    <input type="checkbox" name="future[]" value="DataScience">Data Science<br>
+                    <input type="checkbox" name="future[]" value="Data Analyst">Data Analyst<br>
+                    <input type="checkbox" name="future[]" value="Secret">Secret<br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="Left">
+                    <label>Any Comments or Give Your Hopes and Expectations?</label>
+                </div>
+                <div class="Right">
+                    <textarea id="comments" rows="8" cols="40" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div><br>
+            </div>
+            <div class="row">
+                <p><button class="button" id="submit" type="submit">Submit</button></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
